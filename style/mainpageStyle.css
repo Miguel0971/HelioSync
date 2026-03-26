@@ -1,0 +1,180 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fundo */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #777985, #2e2d30);
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Efeito fundo */
+body::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    background:
+        radial-gradient(circle at 20% 80%, rgba(248,244,4,0.3), transparent),
+        radial-gradient(circle at 80% 20%, rgba(255,119,198,0.3), transparent),
+        radial-gradient(circle at 40% 40%, rgba(120,219,255,0.3), transparent);
+
+    z-index: -1;
+}
+
+/* Card */
+.usuario-container {
+    width: 320px;
+    padding: 25px;
+
+    border-radius: 20px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(15px);
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    animation: fadeUp 0.7s ease;
+}
+
+/* Animação */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Logo */
+.usuario-container img {
+    width: 90px;
+    margin: 0 auto;
+    border-radius: 15px;
+}
+
+/* Título */
+h2 {
+    text-align: center;
+    color: white;
+}
+
+/* Inputs com ícone */
+.input-group {
+    position: relative;
+}
+
+.input-group i {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: rgba(255,255,255,0.7);
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px 10px 10px 35px;
+
+    border-radius: 10px;
+    border: none;
+
+    background: rgba(255,255,255,0.15);
+    color: white;
+}
+
+.input-group input::placeholder {
+    color: rgba(255,255,255,0.6);
+}
+
+.input-group input:focus {
+    box-shadow: 0 0 10px rgba(120,219,255,0.6);
+}
+
+/* Botões */
+.btns {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    flex: 1;
+    padding: 10px;
+
+    border-radius: 10px;
+    border: none;
+
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.btnEntrar {
+    background: linear-gradient(135deg, #9be0b5, #7fcf9d);
+    color:black;
+}
+
+.btnEsqueciSenha {
+    background: linear-gradient(135deg, #ff6b6b, #e25555);
+    color: black;
+}
+
+.btnCriarConta {
+    background: linear-gradient(135deg, #5c8df6, #4a78d1);
+    color: black;
+}
+
+/* Footer */
+footer {
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+}
+
+footer p {
+    color: rgba(255,255,255,0.7);
+    font-size: 12px;
+}
+
+/* Instagram */
+.instagram-footer {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-top: 5px;
+
+    padding: 8px 12px;
+    border-radius: 10px;
+
+    background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+    color: white;
+
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.instagram-footer:hover {
+    transform: scale(1.05);
+}
