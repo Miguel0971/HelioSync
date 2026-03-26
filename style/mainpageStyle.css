@@ -1,106 +1,151 @@
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
 
-/* Fundo da página */
+/* Fundo */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #777985 0%, #2e2d30 100%);
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #777985, #2e2d30);
     min-height: 100vh;
+
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
-    position: relative;
-    overflow-x: hidden;
 }
+
+/* Efeito fundo */
 body::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: 
-        radial-gradient(circle at 20% 80%, rgba(248, 244, 4, 0.3) 0%, transparent 80%),
-        radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 80%),
-        radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.3) 0%, transparent 80%);
+    width: 100%;
+    height: 100%;
+
+    background:
+        radial-gradient(circle at 20% 80%, rgba(248,244,4,0.3), transparent),
+        radial-gradient(circle at 80% 20%, rgba(255,119,198,0.3), transparent),
+        radial-gradient(circle at 40% 40%, rgba(120,219,255,0.3), transparent);
+
     z-index: -1;
 }
 
-@keyframes float {
-    0%, 100% { transform: translateY(0px) rotate(0deg); }
-    50% { transform: translateY(-20px) rotate(1deg); }
+/* Card */
+.usuario-container {
+    width: 320px;
+    padding: 25px;
+
+    border-radius: 20px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(15px);
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    animation: fadeUp 0.7s ease;
 }
 
-/* O container principal do body */
-body > *:not(footer) {
-    margin: 6px 0;
+/* Animação */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-
-
-/* Os títulos das caixas de texto */
-h1 {
-    font-size: 16px;
-    font-weight: normal;
-    color: #ffffff;
+/* Logo */
+.usuario-container img {
+    width: 90px;
+    margin: 0 auto;
+    border-radius: 15px;
 }
 
+/* Título */
+h2 {
+    text-align: center;
+    color: white;
+}
 
-/* Btn em geral */
-button {
-    padding: 8px 12px;
+/* Inputs com ícone */
+.input-group {
+    position: relative;
+}
+
+.input-group i {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: rgba(255,255,255,0.7);
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px 10px 10px 35px;
+
+    border-radius: 10px;
     border: none;
-    border-radius: 5px;
+
+    background: rgba(255,255,255,0.15);
+    color: white;
+}
+
+.input-group input::placeholder {
+    color: rgba(255,255,255,0.6);
+}
+
+.input-group input:focus {
+    box-shadow: 0 0 10px rgba(120,219,255,0.6);
+}
+
+/* Botões */
+.btns {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    flex: 1;
+    padding: 10px;
+
+    border-radius: 10px;
+    border: none;
+
+    font-weight: bold;
     cursor: pointer;
-    font-size: 13px;
+
     transition: 0.2s;
 }
 
-/* Btn referente à "entrar */
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
 .btnEntrar {
-    background-color: #9be0b5;
-    display: flex;
+    background: linear-gradient(135deg, #9be0b5, #7fcf9d);
     color:black;
-    font-size:15px;
-    justify-content: center; /* alinhamento horizontal */
-    align-items: center;     /* alinhamento vertical */
 }
 
-.btnEntrar:hover {
-    background-color: #7fcf9d;
-    display: flex;
-}
-
-/* Btn referente à "esqueci senha" */
 .btnEsqueciSenha {
-    background-color: #ff6b6b;
+    background: linear-gradient(135deg, #ff6b6b, #e25555);
     color: black;
-    display: flex;
 }
 
-.btnEsqueciSenha:hover {
-    background-color: #e25555;
-}
-
-/* Btn referente à "criar conta */
 .btnCriarConta {
-    background-color: #5c8df6;
+    background: linear-gradient(135deg, #5c8df6, #4a78d1);
     color: black;
-    margin-top: 5px;
-    width:300px;
 }
 
-.btnCriarConta:hover {
-    background-color: #4a78d1;
-}
-
-/* Footer do html */
+/* Footer */
 footer {
     position: absolute;
     bottom: 10px;
@@ -108,48 +153,28 @@ footer {
 }
 
 footer p {
+    color: rgba(255,255,255,0.7);
     font-size: 12px;
-    margin-bottom: 5px;
 }
 
-.usuario-container {
-    width: 300px;
-    margin: auto;
+/* Instagram */
+.instagram-footer {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-top: 5px;
+
+    padding: 8px 12px;
+    border-radius: 10px;
+
+    background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+    color: white;
+
+    text-decoration: none;
+    transition: 0.3s;
 }
 
-.usuario-container input {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #1a1111;
-    border-radius: 8px;
-    outline: none;
-    transition: 0.2s;
-    background-color: #e9e8e8;
-    margin-bottom: 10px;
-}
-
-
-.usuario-container input:focus {
-    border-color: #4CAF50;
-    box-shadow: 0 0 5px rgba(76, 175, 80, 0.4);
-}
-
-/* Ícone de usuário (limitando tamanho dele, estava enorme!) */
-.usuario-container img {
-    width: 150px;
-    height: 150px;
-    margin-bottom: 10px;
-    border-radius: 50px;
-    margin: 0 auto 10px auto;
-    display: block;
-}
-.btns {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
-    padding-bottom: 5px;
-}
-
-.btns button {
-    flex: 1;
+.instagram-footer:hover {
+    transform: scale(1.05);
 }
