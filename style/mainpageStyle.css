@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Fundo da página */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #777985 0%, #2e2d30 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    overflow-x: hidden;
+}
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(248, 244, 4, 0.3) 0%, transparent 80%),
+        radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 80%),
+        radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.3) 0%, transparent 80%);
+    z-index: -1;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(1deg); }
+}
+
+/* O container principal do body */
+body > *:not(footer) {
+    margin: 6px 0;
+}
+
+
+
+/* Os títulos das caixas de texto */
+h1 {
+    font-size: 16px;
+    font-weight: normal;
+    color: #ffffff;
+}
+
+
+/* Btn em geral */
+button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: 0.2s;
+}
+
+/* Btn referente à "entrar */
+.btnEntrar {
+    background-color: #9be0b5;
+    display: flex;
+    color:black;
+    font-size:15px;
+    justify-content: center; /* alinhamento horizontal */
+    align-items: center;     /* alinhamento vertical */
+}
+
+.btnEntrar:hover {
+    background-color: #7fcf9d;
+    display: flex;
+}
+
+/* Btn referente à "esqueci senha" */
+.btnEsqueciSenha {
+    background-color: #ff6b6b;
+    color: black;
+    display: flex;
+}
+
+.btnEsqueciSenha:hover {
+    background-color: #e25555;
+}
+
+/* Btn referente à "criar conta */
+.btnCriarConta {
+    background-color: #5c8df6;
+    color: black;
+    margin-top: 5px;
+    width:300px;
+}
+
+.btnCriarConta:hover {
+    background-color: #4a78d1;
+}
+
+/* Footer do html */
+footer {
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+}
+
+footer p {
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.usuario-container {
+    width: 300px;
+    margin: auto;
+}
+
+.usuario-container input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #1a1111;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.2s;
+    background-color: #e9e8e8;
+    margin-bottom: 10px;
+}
+
+
+.usuario-container input:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.4);
+}
+
+/* Ícone de usuário (limitando tamanho dele, estava enorme!) */
+.usuario-container img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+    border-radius: 50px;
+    margin: 0 auto 10px auto;
+    display: block;
+}
+.btns {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding-bottom: 5px;
+}
+
+.btns button {
+    flex: 1;
+}
