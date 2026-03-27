@@ -4,51 +4,109 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Heliosync</title>
-
     <link href="../style/mainpageStyle.css" rel="stylesheet" />
+    <link href="../style/lotusStyle.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="../util/heliosync.jpg">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="icon" href="../util/heliosync.jpg" type="image/png">
 </head>
+
 <body>
-
-<div class="usuario-container">
-
-    <img src="../util/heliosync.jpg">
-
-    <h2>Entrar</h2>
-
-    <div class="input-group">
-        <i class="fa fa-user"></i>
-        <input type="text" placeholder="Usuário">
+    <div class="particles">
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
     </div>
+<div class="main-container">
+    <div class="left-side">
+        <div class="lotus-container">
+            <div class="lotus-glow"></div>
+            <div class="lotus" id="lotus">
+                <div class="petal-wrapper"><div class="petal"></div></div>
+                <div class="petal-wrapper"><div class="petal"></div></div>
+                <div class="petal-wrapper"><div class="petal"></div></div>
+                <div class="petal-wrapper"><div class="petal"></div></div>
+                <div class="petal-wrapper"><div class="petal"></div></div>
+                <div class="petal-wrapper"><div class="petal"></div></div>
+                <div class="petal-wrapper"><div class="petal"></div></div>
+                <div class="petal-wrapper"><div class="petal"></div></div>
+                <div class="lotus-center"></div>
+            </div>
+            <div class="progress-indicator" id="progressText">Aguardando...</div>
+        </div> <!-- fecha lotus-container -->
+    </div> <!-- fecha left-side -->
 
-    <div class="input-group">
-        <i class="fa fa-lock"></i>
-        <input type="password" placeholder="Senha">
+    <div class="right-side">
+        <div class="usuario-container">
+            <img src="../util/heliosync.jpg">
+            <h2>Entrar</h2>
+            <div class="input-group">
+                <i class="fa fa-user"></i>
+                <input type="text" id="username" placeholder="Usuário" maxlength="20">
+            </div>
+            <div class="input-group">
+                <i class="fa fa-lock"></i>
+                <input type="password" id="password" placeholder="Senha" maxlength="20">
+            </div>
+            <div class="btns">
+                <button class="btnEsqueciSenha">Esqueci minha senha</button>
+                <button class="btnEntrar">Entrar</button>
+            </div>
+            <button class="btnCriarConta">Criar conta</button>
+        </div>
     </div>
+</div> <!-- fecha main-container -->
 
-    <div class="btns">
-        <button class="btnEsqueciSenha">Esqueci minha senha</button>
-        <button class="btnEntrar">Entrar</button>
-    </div>
-
-    <button class="btnCriarConta">Criar conta</button>
-
-</div>
-
+<!-- Footer com o instagram do projeto -->
 <footer>
     <p>Heliosync © 2026.1 - UNISO</p>
-
-    <a href="https://www.instagram.com/heliosyncenterprise" 
-       class="instagram-footer"  
-       target="_blank">
-
+    <a href="https://www.instagram.com/heliosyncenterprise" class="instagram-footer" target="_blank">
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="white" viewBox="0 0 24 24">
             <path d="M7.75 2C4.57 2 2 4.57 2 7.75v8.5C2 19.43 4.57 22 7.75 22h8.5C19.43 22 22 19.43 22 16.25v-8.5C22 4.57 19.43 2 16.25 2h-8.5zm0 2h8.5C18.22 4 20 5.78 20 7.75v8.5c0 1.97-1.78 3.75-3.75 3.75h-8.5C5.78 20 4 18.22 4 16.25v-8.5C4 5.78 5.78 4 7.75 4zm8.75 1.5a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5zM12 7a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6z"/>
         </svg>
-
         Instagram
     </a>
 </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const usernameInput = document.getElementById('username');
+    const passwordInput = document.getElementById('password');
+    const lotus = document.getElementById('lotus');
+    const progressText = document.getElementById('progressText');
+
+    function updateLotus() {
+        const userLen = usernameInput.value.trim().length;
+        const passLen = passwordInput.value.length;
+
+        // Remove TODAS as classes
+        lotus.classList.remove('petal1','petal2','petal3','petal4','petal5','petal6','petal7','petal8');
+
+        // Exata contagem de pétalas (8), que vai aumentando de acordo com a quantia de caracteres no usuário e na senha
+        let petals = 0;
+        if (userLen >= 6 && passLen >= 8) petals = 8;
+        else if (passLen >= 6 || userLen >= 8) petals = 7;
+        else if (passLen >= 4 || userLen >= 6) petals = 6;
+        else if (userLen >= 5) petals = 5;
+        else if (userLen >= 4) petals = 4;
+        else if (userLen >= 3) petals = 3;
+        else if (userLen >= 2) petals = 2;
+        else if (userLen >= 1) petals = 1;
+
+        if (petals >= 1) {
+            lotus.classList.add(`petal${petals}`);
+            progressText.textContent = `${petals}/8`;
+        } else {
+            progressText.textContent = 'Comece...';
+        }
+    }
+
+    usernameInput.addEventListener('input', updateLotus);
+    passwordInput.addEventListener('input', updateLotus);
+    updateLotus();
+});
+</script>
 </body>
 </html>
