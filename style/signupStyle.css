@@ -1,0 +1,70 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 350px;
+    padding: 25px;
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.logo {
+    width: 100px;
+    margin: 0 auto;
+    border-radius: 15px;
+}
+
+.card h2 {
+    text-align: center;
+    color: white;
+}
+
+.card input {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+
+    background: rgba(255, 255, 255, 0.486);
+    color: white;
+}
+
+.btns {
+    display: flex;
+    gap: 10px;
+}
+
+.btns button {
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btnVoltar {
+    background: #ff6b6b;
+    color: white;
+}
+
+.btnConfirmarConta {
+    background: #5c8df6;
+    color: white;
+}
+
+button:hover {
+    transform: scale(1.05);
+    transition: 0.2s;
+}

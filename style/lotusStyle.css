@@ -1,4 +1,3 @@
-
 .lotus-container {
     position: absolute;
     top: 50%;
@@ -34,57 +33,129 @@
     transform-origin: bottom center;
     border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
     transition: all 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
     opacity: 0.95;
 }
 
 /* 8 CORES PERFEITAS */
-.petal-wrapper:nth-child(1) .petal { background: linear-gradient(135deg, #9be0b5, #7fcf9d); }
-.petal-wrapper:nth-child(2) .petal { background: linear-gradient(135deg, #5c8df6, #4a78d1); }
-.petal-wrapper:nth-child(3) .petal { background: linear-gradient(135deg, #ff6b6b, #e25555); }
-.petal-wrapper:nth-child(4) .petal { background: linear-gradient(135deg, #ffd93d, #ffcc00); }
-.petal-wrapper:nth-child(5) .petal { background: linear-gradient(135deg, #78d5e6, #5fb4cc); }
-.petal-wrapper:nth-child(6) .petal { background: linear-gradient(135deg, #f7b733, #f5a623); }
-.petal-wrapper:nth-child(7) .petal { background: linear-gradient(135deg, #a8e6cf, #88d8a3); }
-.petal-wrapper:nth-child(8) .petal { background: linear-gradient(135deg, #d299c2, #c085a8); }
+.petal-wrapper:nth-child(1) .petal {
+    background: linear-gradient(135deg, #9be0b5, #7fcf9d);
+}
+
+.petal-wrapper:nth-child(2) .petal {
+    background: linear-gradient(135deg, #5c8df6, #4a78d1);
+}
+
+.petal-wrapper:nth-child(3) .petal {
+    background: linear-gradient(135deg, #ff6b6b, #e25555);
+}
+
+.petal-wrapper:nth-child(4) .petal {
+    background: linear-gradient(135deg, #ffd93d, #ffcc00);
+}
+
+.petal-wrapper:nth-child(5) .petal {
+    background: linear-gradient(135deg, #78d5e6, #5fb4cc);
+}
+
+.petal-wrapper:nth-child(6) .petal {
+    background: linear-gradient(135deg, #f7b733, #f5a623);
+}
+
+.petal-wrapper:nth-child(7) .petal {
+    background: linear-gradient(135deg, #a8e6cf, #88d8a3);
+}
+
+.petal-wrapper:nth-child(8) .petal {
+    background: linear-gradient(135deg, #d299c2, #c085a8);
+}
 
 /* POSIÇÕES EXATAS */
-.petal-wrapper:nth-child(1) { transform: translate(-50%, -50%) rotate(0deg); }
-.petal-wrapper:nth-child(2) { transform: translate(-50%, -50%) rotate(45deg); }
-.petal-wrapper:nth-child(3) { transform: translate(-50%, -50%) rotate(90deg); }
-.petal-wrapper:nth-child(4) { transform: translate(-50%, -50%) rotate(135deg); }
-.petal-wrapper:nth-child(5) { transform: translate(-50%, -50%) rotate(180deg); }
-.petal-wrapper:nth-child(6) { transform: translate(-50%, -50%) rotate(225deg); }
-.petal-wrapper:nth-child(7) { transform: translate(-50%, -50%) rotate(270deg); }
-.petal-wrapper:nth-child(8) { transform: translate(-50%, -50%) rotate(315deg); }
+.petal-wrapper:nth-child(1) {
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.petal-wrapper:nth-child(2) {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.petal-wrapper:nth-child(3) {
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.petal-wrapper:nth-child(4) {
+    transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.petal-wrapper:nth-child(5) {
+    transform: translate(-50%, -50%) rotate(180deg);
+}
+
+.petal-wrapper:nth-child(6) {
+    transform: translate(-50%, -50%) rotate(225deg);
+}
+
+.petal-wrapper:nth-child(7) {
+    transform: translate(-50%, -50%) rotate(270deg);
+}
+
+.petal-wrapper:nth-child(8) {
+    transform: translate(-50%, -50%) rotate(315deg);
+}
 
 /* FECHADA */
-.petal { transform: scaleY(0.05) scaleX(0.85); opacity: 0.5; }
+.petal {
+    transform: scaleY(0.05) scaleX(0.85);
+    opacity: 0.5;
+}
 
 /* SEQUENCIAL - UMA POR VEZ COM DELAY */
-.lotus.petal1 .petal-wrapper:nth-child(1) .petal { 
-    transform: scaleY(1) scaleX(1); opacity: 1; transition-delay: 0s; 
+.lotus.petal1 .petal-wrapper:nth-child(1) .petal {
+    transform: scaleY(1) scaleX(1);
+    opacity: 1;
+    transition-delay: 0s;
 }
-.lotus.petal2 .petal-wrapper:nth-child(2) .petal { 
-    transform: scaleY(1) scaleX(1); opacity: 1; transition-delay: 0.08s; 
+
+.lotus.petal2 .petal-wrapper:nth-child(2) .petal {
+    transform: scaleY(1) scaleX(1);
+    opacity: 1;
+    transition-delay: 0.08s;
 }
-.lotus.petal3 .petal-wrapper:nth-child(3) .petal { 
-    transform: scaleY(1) scaleX(1); opacity: 1; transition-delay: 0.16s; 
+
+.lotus.petal3 .petal-wrapper:nth-child(3) .petal {
+    transform: scaleY(1) scaleX(1);
+    opacity: 1;
+    transition-delay: 0.16s;
 }
-.lotus.petal4 .petal-wrapper:nth-child(4) .petal { 
-    transform: scaleY(1) scaleX(1); opacity: 1; transition-delay: 0.24s; 
+
+.lotus.petal4 .petal-wrapper:nth-child(4) .petal {
+    transform: scaleY(1) scaleX(1);
+    opacity: 1;
+    transition-delay: 0.24s;
 }
-.lotus.petal5 .petal-wrapper:nth-child(5) .petal { 
-    transform: scaleY(1) scaleX(1); opacity: 1; transition-delay: 0.32s; 
+
+.lotus.petal5 .petal-wrapper:nth-child(5) .petal {
+    transform: scaleY(1) scaleX(1);
+    opacity: 1;
+    transition-delay: 0.32s;
 }
-.lotus.petal6 .petal-wrapper:nth-child(6) .petal { 
-    transform: scaleY(1) scaleX(1); opacity: 1; transition-delay: 0.40s; 
+
+.lotus.petal6 .petal-wrapper:nth-child(6) .petal {
+    transform: scaleY(1) scaleX(1);
+    opacity: 1;
+    transition-delay: 0.40s;
 }
-.lotus.petal7 .petal-wrapper:nth-child(7) .petal { 
-    transform: scaleY(1) scaleX(1); opacity: 1; transition-delay: 0.48s; 
+
+.lotus.petal7 .petal-wrapper:nth-child(7) .petal {
+    transform: scaleY(1) scaleX(1);
+    opacity: 1;
+    transition-delay: 0.48s;
 }
-.lotus.petal8 .petal-wrapper:nth-child(8) .petal { 
-    transform: scaleY(1) scaleX(1); opacity: 1; transition-delay: 0.56s; 
+
+.lotus.petal8 .petal-wrapper:nth-child(8) .petal {
+    transform: scaleY(1) scaleX(1);
+    opacity: 1;
+    transition-delay: 0.56s;
 }
 
 /* mantém as pétalas anteriores abertas */
@@ -116,7 +187,8 @@
 .lotus.petal8 .petal-wrapper:nth-child(5) .petal,
 .lotus.petal8 .petal-wrapper:nth-child(6) .petal,
 .lotus.petal8 .petal-wrapper:nth-child(7) .petal {
-    transform: scaleY(1) scaleX(1); opacity: 1;
+    transform: scaleY(1) scaleX(1);
+    opacity: 1;
 }
 
 /* CENTRO */
@@ -124,34 +196,40 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 45px;      /* MENOR */
-    height: 45px;     /* ← MENOR */
+    width: 45px;
+    /* MENOR */
+    height: 45px;
+    /* ← MENOR */
     margin: -22.5px 0 0 -22.5px;
-    background: radial-gradient(circle, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.4) 100%);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.4) 100%);
     border-radius: 50%;
-    box-shadow: 0 0 15px rgba(255,255,255,0.4);  /* ← SOMBRA SUAVE */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+    /* ← SOMBRA SUAVE */
     transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    opacity: 0.6;     /* MENOS DESTACADO */
-    border: 2px solid rgba(255,255,255,0.3);     /* ← BORDA FINA */
+    opacity: 0.6;
+    /* MENOS DESTACADO */
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    /* ← BORDA FINA */
 }
 
-.lotus.petal4 .lotus-center { 
-    opacity: 0.75; 
-    transform: scale(1.05); 
+.lotus.petal4 .lotus-center {
+    opacity: 0.75;
+    transform: scale(1.05);
 }
 
-.lotus.petal6 .lotus-center { 
-    opacity: 0.85; 
-    transform: scale(1.1); 
-    box-shadow: 0 0 25px rgba(255,255,255,0.6);
+.lotus.petal6 .lotus-center {
+    opacity: 0.85;
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.6);
 }
 
-.lotus.petal8 .lotus-center { 
-    opacity: 1; 
-    transform: scale(1.15);     
-    box-shadow: 0 0 35px rgba(255,255,255,0.9);  
-    background: radial-gradient(circle, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.7) 100%);
+.lotus.petal8 .lotus-center {
+    opacity: 1;
+    transform: scale(1.15);
+    box-shadow: 0 0 35px rgba(255, 255, 255, 0.9);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.7) 100%);
 }
+
 .lotus-glow {
     position: absolute;
     top: 50%;
@@ -159,13 +237,15 @@
     width: 320px;
     height: 320px;
     margin: -160px 0 0 -160px;
-    background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
     border-radius: 50%;
     opacity: 0;
     transition: opacity 0.8s ease;
 }
 
-.lotus.petal8 .lotus-glow { opacity: 1; }
+.lotus.petal8 .lotus-glow {
+    opacity: 1;
+}
 
 /* CONTADOR SEQUENCIAL */
 .progress-indicator {
@@ -173,24 +253,45 @@
     bottom: -60px;
     left: 50%;
     transform: translateX(-50%);
-    color: rgba(255,255,255,1);
+    color: rgba(255, 255, 255, 1);
     font-size: 15px;
     font-weight: 800;
-    text-shadow: 0 2px 20px rgba(0,0,0,0.9);
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.9);
     opacity: 0;
     transition: all 0.4s ease;
     font-family: 'Segoe UI', sans-serif;
 }
 
-.lotus.petal1 .progress-indicator { opacity: 1; color: #9be0b5; }
-.lotus.petal2 .progress-indicator { color: #5c8df6; }
-.lotus.petal3 .progress-indicator { color: #ff6b6b; }
-.lotus.petal4 .progress-indicator { color: #ffd93d; }
-.lotus.petal5 .progress-indicator { color: #78d5e6; }
-.lotus.petal6 .progress-indicator { color: #f7b733; }
-.lotus.petal7 .progress-indicator { color: #a8e6cf; }
-.lotus.petal8 .progress-indicator { 
-    color: #fff; 
-    text-shadow: 0 0 40px rgba(255,255,255,1);
-    transform: translateX(-50%) scale(1.15);
+.lotus.petal1 .progress-indicator {
+    opacity: 1;
+    color: #9be0b5;
 }
+
+.lotus.petal2 .progress-indicator {
+    color: #5c8df6;
+}
+
+.lotus.petal3 .progress-indicator {
+    color: #ff6b6b;
+}
+
+.lotus.petal4 .progress-indicator {
+    color: #ffd93d;
+}
+
+.lotus.petal5 .progress-indicator {
+    color: #78d5e6;
+}
+
+.lotus.petal6 .progress-indicator {
+    color: #f7b733;
+}
+
+.lotus.petal7 .progress-indicator {
+    color: #a8e6cf;
+}
+
+.lotus.petal8 .progress-indicator {
+    color: #fff;
+    text-shadow: 0 0 40px rgba(255, 255, 255, 1);
+    transform: translateX(-50%) scale(1.15);
