@@ -8,7 +8,6 @@
     <link href="../style/mainpageStyle.css" rel="stylesheet" />
     <link href="../style/lotusStyle.css" rel="stylesheet" />
     <link rel="icon" type="image/png" href="../util/heliosync.jpg">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
@@ -88,45 +87,7 @@
         </a>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const usernameInput = document.getElementById('username');
-            const passwordInput = document.getElementById('password');
-            const lotus = document.getElementById('lotus');
-            const progressText = document.getElementById('progressText');
-
-            function updateLotus() {
-                const userLen = usernameInput.value.trim().length;
-                const passLen = passwordInput.value.length;
-
-                // Remove TODAS as classes
-                lotus.classList.remove('petal1', 'petal2', 'petal3', 'petal4', 'petal5', 'petal6', 'petal7', 'petal8');
-
-                // Exata contagem de pétalas (8), que vai aumentando de acordo com a quantia de caracteres no usuário e na senha
-                let petals = 0;
-                let soma = userLen + passLen
-                if (soma >= 16) petals = 8;
-                else if (soma >= 14) petals = 7;
-                else if (soma >= 12) petals = 6;
-                else if (soma >= 10) petals = 5;
-                else if (soma >= 8) petals = 4;
-                else if (soma >= 6) petals = 3;
-                else if (soma >= 4) petals = 2;
-                else if (soma >= 2) petals = 1;
-
-                if (petals >= 1) {
-                    lotus.classList.add(`petal${petals}`);
-                    progressText.textContent = `${petals}/8`;
-                } else {
-                    progressText.textContent = 'Comece...';
-                }
-            }
-
-            usernameInput.addEventListener('input', updateLotus);
-            passwordInput.addEventListener('input', updateLotus);
-            updateLotus();
-        });
-    </script>
+    <script src="../script/mainScript.js"></script>
 </body>
 
 </html>
